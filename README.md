@@ -18,17 +18,16 @@ Works in both **Claude Code** and **Codex** (any tool that reads `~/.claude/skil
 Clone the skill (no git history) into the shared skills dir and run the installer, which symlinks it into Claude Code and Codex:
 
 ```bash
-npx degit <your-fork-or-repo-url> ~/.agents/skills/agent-docs
+npx degit muhammaddadu/agent-docs-skill ~/.agents/skills/agent-docs
 ~/.agents/skills/agent-docs/install.sh
 ```
 
-> Replace `<your-fork-or-repo-url>` with the Git host path, e.g. `github:user/agent-docs`.
 > `~/.agents/skills/` is just the canonical home — `install.sh` symlinks from there into each tool, so a single `git pull` updates the skill everywhere.
 
 ### Option B — clone + install
 
 ```bash
-git clone <your-fork-or-repo-url> ~/.agents/skills/agent-docs
+git clone git@github.com:muhammaddadu/agent-docs-skill.git ~/.agents/skills/agent-docs
 ~/.agents/skills/agent-docs/install.sh
 ```
 
@@ -36,7 +35,7 @@ git clone <your-fork-or-repo-url> ~/.agents/skills/agent-docs
 
 Paste this to Claude Code or Codex:
 
-> Install the agent-docs skill: clone `<your-fork-or-repo-url>` into `~/.agents/skills/agent-docs`, then run its `install.sh` to symlink it into `~/.claude/skills` and `~/.codex/skills`.
+> Install the agent-docs skill: clone `git@github.com:muhammaddadu/agent-docs-skill.git` into `~/.agents/skills/agent-docs`, then run its `install.sh` to symlink it into `~/.claude/skills` and `~/.codex/skills`.
 
 Restart the agent (or start a new session) after installing so it picks up the skill.
 
